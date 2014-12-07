@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <head>
+        <title>My AngularJS App</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/dojo/dojo.js"></script>
+        <script src="bower_components/dijit/dijit.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="angular-dojo-app">
+        <div ng-controller="NameCtrl as myController">
+            <h1>
+                {{myController.myName}}
+            </h1>
+            <input data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="nameText" ng-model="myController.myName"/>
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="nameButton" value="Name">Name</button>
+        </div>
+    </body>
+</html>
